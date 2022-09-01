@@ -1,0 +1,15 @@
+# default service type is ClusterIp
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-service
+spec:
+  clusterIP: None
+  selector:
+    app: nginx
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 9376
+      
